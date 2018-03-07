@@ -12,6 +12,7 @@
     certbot_script: "{{ certbot_dir }}/certbot-auto"
 
 - name: Ensure certbot-auto is executable.
+  become: True
   file:
     path: "{{ certbot_script }}"
     mode: 0755
